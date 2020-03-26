@@ -1,5 +1,6 @@
 // If you create a new resume, import it here:
 import './material-dark.vue';
+import './material-dark-extended.vue';
 import './left-right.vue';
 import './oblique.vue';
 import './side-bar.vue';

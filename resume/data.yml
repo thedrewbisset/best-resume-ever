@@ -4,10 +4,10 @@ name:
   middle:
   last: Bisset
 about: Hi, I'm a passionate leader and thoughtful engineer who is solutions-driven and serious 
-     about business results. I've been a professional in the technology field for nearly 15 years 
-     in various roles as contributor, manager, and executive. I'm an advocate for remote, distributed
-     teams and have significant experience achieving business impact, loyalty, and personal development within 
-     them.
+     about producing business results. I've been a professional in the technology field for nearly 15 years
+     in various roles as contributor, manager, and executive. As an advocate for remote, distributed
+     teams I have deep experience achieving business impact, loyalty, and personal development
+     through intentional communication, asynchronous collaboration, and empathetic alliancing.
 position: Engineering Leader
 
 birth:
@@ -19,37 +19,45 @@ experience:
   position: CTO
   timeperiod: since December 2017
   description:
-    - Helped take Peerfit from startup to growth company, scaling product and engineering staff by 6x over 18 months. 
-    - Guided the strategy and execution of the department toward strategic business opportunities enabling user growth of x% and an increase in engagement by y%. 
-    - Managed a $7MM P&L which included all SAAS contracts across the business and helped implement a software capitalization system resulting in a significant increase to net income.
-    - Lead the department through successfully transforming its process and controls to support the achievement of WCAG AA 2.0, HIPAA Hi-Tech, and SOC-2 Type-2 compliance certifications.
+    - Lead Product and Engineering from startup to growth company, scaling staff by 6x over a 2 year period to meet significant market demand and an aggressive growth pace.
+    - Guided the strategy and execution of the product toward strategic business opportunities enabling sales growth of more than 4000% and an increase in engagement of more than 200% year over year.
+    - Responsible for all company technology including SAAS and MDM and helped operationalize their management through implementations of RBAC, software procurement, and zero trust networking.
+    - Managed a $7MM P&L at peak growth mode and helped implement a software capitalization system resulting in significant increases to net income for the company.
+    - Oversaw the successfull transformation of department procedures and controls to support the achievement of WCAG AA 2.0, HIPAA Hi-Tech, and SOC-2 Type-2 compliance certifications.
   website: https://peerfit.com
 
 - company: Tuft & Needle
   position: Backend Engineer
   timeperiod: February 2017 - December 2017
   description:
-    - Implemented a Mastery program purposed towards knowledge sharing and skill development for T&N engineers leading to an increase in team engagement and a stronger overlap of skill and expertise.
-    - Helped to build the early stages of a supply chain management system for use across T&N's third party manufacturers
+    - Implemented a Mastery program purposed towards knowledge sharing and skill development for T&N engineers leading to an increase in team engagement and a stronger overlap of knowledge and expertise.
+    - Helped to build the next gen implementation of a lean supply chain management system for use across T&N's third party manufacturers.
+    - Supported quick pivots on business strategy including T&N's first Black Friday Sale and introduction of a new premium mattress line both of which demanded fast and pragmatic engineering solutions.
 
 - company: Aetna
-  position: Senior Engineer, Engineering Manager
-  timeperiod: March 2014 - February 2017
+  position: Engineering Manager, Senior Fullstack Engineer
+  timeperiod: April 2014 - February 2017
   description:
-    - Helped with the fullstack build-out of a price transparency tool using Ember, Rails, and Ruby. This was later scaled to a service-oriented design using AMQP over RabbitMQ. This architecture allowed for more flexible and performant integration of data from various Aetna and 3rd party systems to support pricing of complex medical procedures providing us a significant competitive advantage in the price transparency market.
-    - Managed several engineering teams and played an active role in career advancement for many direct reports
-    - Supported teams through several org consolidations maintaining strong retention and smooth transitioning with candor, positive politics, and establishing purpose and vision
+    - Helped build the flagship price transparency product using Ember and Ruby on Rails. This was later iteratively scaled to a service-oriented design using AMQP over RabbitMQ allowing for more flexible and performant integration of data from various Aetna and 3rd party systems.
+    - Guided implementation of a Cost Calculator service that allowed reliable cost estimation of complex medical procedures which in turn lead to a competitive advantage instrumental in winning strategic contracts.
+    - Managed several engineering teams and played an active role in career advancement for direct reports leading to later promotions.
+    - Supported teams through several org consolidations maintaining strong retention and smooth transitioning by embracing strategic candor and positive politics.
 
-education:
-- degree: Bachelor of Music 
-  timeperiod: September 2002 - May 2006
-  description: Graduated summa cum laude from the New England Conservatory with a major in Composition and minor in Education
-  website: https://necmusic.edu
+# - company: Berklee College of Music - Berklee Online
+#   position: Software Engineer
+#   timeperiod: September 2012 - April 2014
+
+# - company: Commonwealth Financial Network
+#   position: Software Engineer, Technology Support Team Lead
+#   timeperiod: February 2007 - September 2012
+
+# education:
+# - degree: Bachelor of Music - New England Conservatory
+#   timeperiod: September 2002 - May 2006
 
 # skill level goes 0 to 100
-skills:
-- name: Leadership
-  level: 95
+
+languages:
 - name: Ruby
   level: 90
 - name: JavaScript
@@ -57,22 +65,34 @@ skills:
 - name: Elixir
   level: 60
 - name: Python
-  level: 60
-- name: Git
-  level: 90
+  level: 50
 - name: Bash
+  level: 70
+
+tools:
+- name: Gitlab
   level: 80
+- name: Jira
+  level: 80
+- name: Looker
+  level: 70
 - name: Docker
   level: 70
 - name: Kubernetes
+  level: 40
+- name: GCP
   level: 50
+- name: vim
+  level: 70
+- name: tmux
+  level: 70
 
 contact:
   email: thedrewbisset@gmail.com
   phone: 703-967-1538
   street: 95 Woodridge Ln
   city: Lexington, VA
-  website: thedrewbisset.com
+  website: https://thedrewbisset.com
   github: thedrewbisset
 lang: en
 `

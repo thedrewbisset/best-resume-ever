@@ -7,29 +7,6 @@
     <div class="section-headline">
       {{ lang.contact }}
     </div>
-    <div v-if="person.birth" class="item">
-      <div class="icon">
-        <i class="material-icons">account_circle</i>
-      </div>
-      <div class="text">
-        <ul>
-          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="icon">
-        <i class="material-icons">location_city</i>
-      </div>
-      <div class="text">
-        <ul>
-          <li>{{person.contact.street}}</li>
-          <li>{{person.contact.city}}</li>
-        </ul>
-      </div>
-    </div>
-
     <a :href="contactLinks.phone">
       <div class="item">
         <div class="icon">
@@ -57,7 +34,7 @@
         <div class="icon">
           <i class="fa fa-github"></i>
         </div>
-        <div class="text">
+        <div class="text github">
           <span>@{{person.contact.github}}</span>
           <span>github.com/{{person.contact.github}}</span>
         </div>
@@ -75,15 +52,31 @@
       </div>
     </a>
 
-    <div class="item last">
+    <div class="item">
       <div class="section-headline">
-        {{ lang.skills }}
+        {{ lang.languages }}
       </div>
-      <div class="skill" v-for="skill in person.skills" :key="skill.name">
+      <div class="skill" v-for="language in person.languages" :key="language.name">
         <div class="right">
-          <span>{{skill.name}}&nbsp;</span>
+          <span>{{language.name}}&nbsp;</span>
           <div class="progress">
-            <div class="determinate" :style="'width: '+skill.level+'%;'">
+            <div class="determinate" :style="'width: '+language.level+'%;'">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item last">
+      <div class="section-headline tools">
+        {{ lang.tools }}
+      </div>
+      <div class="skill" v-for="tool in person.tools" :key="tool.name">
+        <div class="right">
+          <span>{{tool.name}}&nbsp;</span>
+          <div class="progress">
+            <div class="determinate" :style="'width: '+tool.level+'%;'">
               <i class="fa fa-circle"></i>
             </div>
           </div>
@@ -106,17 +99,13 @@
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
-        <p class="info" v-for="item in experience.description">
-          {{item}}
-        </p>
+        <p class="info" v-for="item in experience.description">{{item}}</p>
     </div>
-    <div class="section-headline">{{ lang.education }}</div>
+    <div class="section-headline" v-if="person.education">{{ lang.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
-      <p class="info">
-        {{education.timeperiod}}, {{education.description}}
-      </p>
+      <div class="subheadline">{{education.timeperiod}}</div>
     </div>
   </div>
 
@@ -150,13 +139,12 @@ a {
 }
 .title {
   right:25px;
-  padding-left:20px;
   padding-top:20px;
   bottom:25px;
   h2 {
     text-transform:uppercase;
     display:block;
-    font-size:1.17em;
+    font-size:23pt;
     -webkit-margin-before:1em;
     -webkit-margin-after:0;
     -webkit-margin-start:0;
@@ -183,7 +171,7 @@ a {
     color:rgba(63,61,60,0.71);
     display:block;
     font-size:0.67em;
-    font-size:10pt;
+    font-size:15pt;
     -webkit-margin-before:0;
     -webkit-margin-after:1em;
     -webkit-margin-start:0;
@@ -203,11 +191,8 @@ a {
   text-transform:uppercase;
   font-weight:500;
   letter-spacing:3px;
-  font-size:10pt;
+  font-size:15pt;
   opacity:0.8;
-  margin-left:20px;
-  margin-top:40px;
-  margin-bottom:20px;
   color:#3f3d3c;
 }
 .c {
@@ -264,37 +249,49 @@ h4 {
   opacity:1;
 }
 .rightCol {
-  width:63.5%;
+  width:65%;
   height:100%;
   float:right;
   display:flex;
   flex-direction:column;
+  margin-right: 1%;
+  .section-headline {
+    margin-top:30px;
+    margin-bottom:10px;
+  }
   .block {
     width:90%;
     position:relative;
     background-color:#ffffff;
     padding:20px;
-    margin-top:5px;
-    margin-bottom:5px;
+    margin-top:22px;
+    margin-bottom:22px;
     display:inline-block;
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     .headline {
-      font-weight:300;
+      font-weight:400;
       display:block;
-      font-size:15px;
-      color:rgba(0,0,0,0.870588);
+      font-size:18px;
+      color:rgba(0,0,0,0.7);
     }
     .subheadline {
       color:rgba(0,0,0,0.541176);
       display:block;
       font-size:14px;
       font-weight:300;
+      padding-top: 3px;
     }
     .info {
       font-size:14px;
       color:rgba(0,0,0,0.870588);
       margin-bottom:0;
-      padding-top:20px;
+      padding:20px 15px 0 15px;
+    }
+    p.info:before {
+      font-family: 'FontAwesome';
+      content: '\f105';
+      margin:0 7px 0 -13px;
+      font-weight: bold;
     }
     .icon {
       width:16%;
@@ -342,7 +339,7 @@ h4 {
   }
 }
 .leftCol {
-  width:35%;
+  width:30%;
   height:100%;
   float:left;
   padding:0;
@@ -354,6 +351,9 @@ h4 {
   display:block;
   .section-headline {
     color:rgba(255,255,255,0.54);
+    padding-left: 15px;
+    margin-top:40px;
+    margin-bottom:20px;
   }
   a {
     color:rgba(255,255,255,0.59);
@@ -366,7 +366,7 @@ h4 {
     background-position:center;
     position:relative;
     width:100%;
-    height:277px;
+    height:440px;
   }
   .item {
     width:100%;
@@ -380,11 +380,14 @@ h4 {
       width:20%;
       float:left;
     }
+    .text.github {
+      padding-top: 0;
+    }
     .text {
       float:right;
       width:69%;
       padding-right:10%;
-      padding-top:0;
+      padding-top:4px;
       display:block;
       font-size:15px;
       font-weight:300;
@@ -456,5 +459,37 @@ h4 {
 #githubIcon {
   width:25px;
   padding-left:17px;
+}
+
+@media print {
+  .title {
+   padding-top: 10px;
+  }
+  .rightCol {
+    .block {
+      box-shadow: none;
+    }
+  }
+  .leftCol {
+    width: 33%;
+    .section-headline.tools {
+      margin-top: 23px;
+    }
+    .heading {
+      height: 360px;
+    }
+  }
+  .rightCol {
+    width: 64%;
+    .section-headline {
+      margin-top:10px;
+    }
+    .block {
+      margin-top: 12px;
+      .info {
+        padding: 10px 15px 5px 15px;
+      }
+    }
+  }
 }
 </style>

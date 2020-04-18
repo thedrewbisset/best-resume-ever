@@ -37,10 +37,5 @@ export default Vue.component('resume', {
 
 .page {
   background: white;
-  position: relative;
-  width: 21cm;
-  display: block;
-  page-break-after: auto;
-  overflow: hidden;
 }
 </style>
